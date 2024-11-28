@@ -1,0 +1,172 @@
+/* Definición de Fuente Personalizada */
+@font-face {
+    font-family: Juan;
+    src: url(/Librerias/Cinzel/Cinzel-VariableFont_wght.ttf);
+}
+
+/* Estilos Globales */
+* {
+    font-family: Juan;
+}
+
+/* Diseño del Contenedor de Cuadrícula */
+.grid-container {
+    background-color: rgb(16, 16, 236);
+    border: 1px solid rgb(233, 91, 91);
+    border-radius: 5px;
+    padding: 5px;
+    display: grid;
+    text-align: center;
+    grid-template-areas: 
+        "logo    header  header  header  header"
+        "nav     nav     nav     nav     nav"
+        "main    main    main    main    main"
+        "footer  footer  footer  footer  footer";
+}
+
+/* Áreas de la Cuadrícula */
+.log {
+    grid-area: logo;
+    text-align: center;
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    justify-content: end;
+    align-content: center;
+}
+
+.nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.main {
+    grid-area: main;
+    height: 600px;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+/* Estilos de Divisiones en Contenedor de Cuadrícula */
+.grid-container div {
+    background-color: rgb(228, 155, 155);
+    border: 3px solid black;
+}
+
+/* Estilos de Navegación */
+.nav a {
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.nav a h3 {
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+
+.nav a:hover {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+.nav a:hover h3 {
+    transform: scale(1.05);
+}
+
+/* Estilos de Empresa y Texto */
+.empresa {
+    color: white;
+    text-align: center;
+}
+
+/* Estilos de Imágenes */
+.imagen {
+    text-align: center;
+}
+
+.imagen-reducida {
+    width: 10px; 
+    height: auto;
+}
+
+.imagenRayo {
+    width: 50px;
+    height: auto;
+}
+
+/* Estilos de Sección "Soy Yo" */
+.header2 {
+    background-color: #4a4a4a;
+    color: white;
+    padding: 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header2 h1 {
+    margin: 0;
+}
+
+.foto_perfil {
+    width: 100px;
+    height: 100px;
+}
+
+.foto_perfil img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.content2 {
+    padding: 20px;
+}
+
+.info {
+    text-align: center;
+}
+
+.footer2 {
+    background-color: #4a4a4a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer2 a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilos de Contenido Dinámico */
+#menu-message:target {
+    display: block;
+}
+
+#default-message {
+    display: none;
+}
+
+/* Diseño Responsivo */
+@media (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

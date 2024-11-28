@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactividad sin JavaScript</title>
+    <link rel="stylesheet" href="/css/miEstilo.css">
+    <style>
+        /* Hide menu message by default */
+        #menu-message { display: none; }
+        
+        /* Show menu message when #menu link is targeted */
+        #menu:target #default-content { display: none; }
+        #menu:target #menu-message { display: block; }
+    </style>
+</head>
+<body>
+    <div class="grid-container" id="menu">
+        <div class="log" id="log">
+            <h1 class="empresa">Juan Daniel´s</h1>
+            <img src="/css/descarga.png" alt="ejemplo" class="imagenRayo">
+        </div>
+        <div class="header"> 
+            <img src="/css/star_24dp_FFFF55_FILL0_wght400_GRAD0_opsz24.png" alt="">
+        </div>
+        <div class="nav">
+            <a href="#menu"><h3>Menu</h3></a>
+            <a href="#soyYo"><h3>¿Quienes somos?</h3></a>
+            <a href="/productos.html"><h3>Productos</h3></a>
+            <a href="/contacto.html"><h3>Contactanos</h3></a>
+        </div>
+        <div class="main" id="main-content">
+            <div id="default-content">
+                <h1 id="default-message">Cuerpo Principal</h1>
+                <p>Este es el contenido inicial de la página.</p>
+            </div>
+            <div id="menu-message">
+                <h2>Bienvenido al Menú</h2>
+                <p>Bienvenido a la pagina, aqui encontraras de todo un porquito :D</p>
+            </div>
+        </div>
+        <div class="footer">Daniel´s INC</div>
+    </div>
+
+    <!-- Sección "Soy Yo" -->
+    <div id="soyYo" class="seccion-soy-yo">
+        <div class="grid-container">
+            <header class="header2">
+                <div class="header-content">
+                    <h1>Soy Yo</h1>
+                    <section class="foto_perfil">
+                        <img src="/css/yo.jfif" alt="Tu foto">
+                    </section>
+                </div>
+            </header>
+            
+            <main class="content2">
+                <section class="info">
+                    <p>Hola, soy Juan Guarin, y este es mi espacio personal.</p>
+                    <p>En este sitio podrás conocer más sobre mi trabajo y mis proyectos.</p>
+                </section>
+            </main>
+            
+            <footer class="footer2">
+                <a href="#log">Volver</a>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
